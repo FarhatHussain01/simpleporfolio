@@ -1,0 +1,116 @@
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary:#CA4361; 
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    /* gap is use for margin in flex */
+    gap: 25px;
+}
+
+.nav-links ul a{
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+    font-size: 1.2rem;
+    transition: all 0.3sec;
+}
+
+.nav-links ul a:hover{
+    color: var(--primary);
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+    align-items: center;
+}
+
+/* .active::before{
+   content: "hi"; 
+*/
+
+.active {
+    position: relative;
+}
+
+.active::after{
+    content:"";
+    position:absolute;
+    width: 20px;
+    height: 3px;
+    top :15px;
+    left: 20px;
+    margin-top: 10px;
+    background-color:var(--primary);
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight:600;
+    transition: all .3sec;
+}
+
+.btn-Sign-up{
+    background-color: #CA4361;
+    color: white;
+}
+
+.btn-Sign-up:hover{
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-login{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-login:hover{
+    background-color: var(--primary);
+    color: white;
+}
+
+.cta {
+    padding: 1.3rem 7rem;
+    background-color: var(--primary);
+    color: aliceblue;
+}
+
+.container {
+    display: flex;
+    margin: 0  auto;
+    margin-top: 20px;
+    width:1100px;
+    align-items: center;
+    gap: 15px;
+    max-width:1400px ;
+    margin:0 auto;
+    
+}
+
+.container h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.container h1 span {
+    color: var(--primary);
+}
+
+.container p {
+    color: grey;
+    margin: 20px 0;
+    width: 240px;
+    font-size: larger;
+}
